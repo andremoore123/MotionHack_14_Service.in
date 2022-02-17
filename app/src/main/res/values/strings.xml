@@ -11,4 +11,5 @@
     <string name="third_slide_title">Get Inspired</string>
     <string name="third_slide_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Habitasse ornare lectus sagittis eu habitasse sed. Sit ut venenatis dolor nunc.</string>
     <string name="agreement">I agree with terms &amp; condition</string>
+    <string name="errorEmpty">Cannot be Empty</string>
 </resources>

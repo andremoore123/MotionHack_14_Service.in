@@ -40,7 +40,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout3"
+            android:id="@+id/layout_nama"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
@@ -58,7 +58,8 @@
                 android:id="@+id/register_input_nama"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:maxLines="1"/>
+                android:maxLines="1"
+                android:inputType="textPersonName"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         //Layout Input Email
@@ -68,14 +69,14 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:text="Email"
-            app:layout_constraintStart_toStartOf="@+id/textInputLayout3"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
+            app:layout_constraintStart_toStartOf="@+id/layout_nama"
+            app:layout_constraintTop_toBottomOf="@+id/layout_nama" />
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout4"
+            android:id="@+id/layout_email"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            app:layout_constraintEnd_toEndOf="@+id/textInputLayout3"
+            app:layout_constraintEnd_toEndOf="@+id/layout_nama"
             app:layout_constraintStart_toStartOf="@+id/textView5"
             app:layout_constraintTop_toBottomOf="@+id/textView5"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -86,9 +87,10 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/register_input_email"
+                android:inputType="textEmailAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:maxLines="1"/>
+                android:maxLines="1" />
         </com.google.android.material.textfield.TextInputLayout>
 
         //Layout Input Password
@@ -98,16 +100,16 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:text="Password"
-            app:layout_constraintStart_toStartOf="@+id/textInputLayout4"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout4"
+            app:layout_constraintStart_toStartOf="@+id/layout_email"
+            app:layout_constraintTop_toBottomOf="@+id/layout_email"
             />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout5"
+            android:id="@+id/layout_password"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            app:layout_constraintEnd_toEndOf="@+id/textInputLayout4"
+            app:layout_constraintEnd_toEndOf="@+id/layout_email"
             app:layout_constraintStart_toStartOf="@+id/textView6"
             app:layout_constraintTop_toBottomOf="@+id/textView6"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -132,15 +134,15 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:text="Tanggal lahir"
-            app:layout_constraintStart_toStartOf="@+id/textInputLayout5"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout5" />
+            app:layout_constraintStart_toStartOf="@+id/layout_password"
+            app:layout_constraintTop_toBottomOf="@+id/layout_password" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout6"
+            android:id="@+id/layout_date"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="@+id/textInputLayout5"
-            app:layout_constraintStart_toStartOf="@+id/textInputLayout5"
+            app:layout_constraintEnd_toEndOf="@+id/layout_password"
+            app:layout_constraintStart_toStartOf="@+id/layout_password"
             app:layout_constraintTop_toBottomOf="@+id/textView7"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:startIconDrawable="@drawable/ic_calender"
@@ -155,7 +157,7 @@
                 android:layout_height="wrap_content"
                 android:hint="mm/dd/yy"
                 android:inputType="date"
-                android:onClick="showTimePickerDialog"/>
+                android:focusableInTouchMode="false"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         //Layout Phone Number
@@ -166,14 +168,14 @@
             android:layout_marginTop="12dp"
             android:text="Phone Number"
             app:layout_constraintStart_toStartOf="@+id/textView7"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout6" />
+            app:layout_constraintTop_toBottomOf="@+id/layout_date" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout7"
+            android:id="@+id/layout_phone"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            app:layout_constraintEnd_toEndOf="@+id/textInputLayout6"
+            app:layout_constraintEnd_toEndOf="@+id/layout_date"
             app:layout_constraintStart_toStartOf="@+id/textView8"
             app:layout_constraintTop_toBottomOf="@+id/textView8"
             app:boxCornerRadiusBottomEnd="8dp"
@@ -191,14 +193,14 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <CheckBox
-            android:id="@+id/checkBox"
+            android:id="@+id/register_check_box"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:buttonTint="@color/primary_blue"
             android:text="@string/agreement"
             app:layout_constraintStart_toStartOf="@+id/textView8"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout7" />
+            app:layout_constraintTop_toBottomOf="@+id/layout_phone" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_register2"
@@ -206,9 +208,9 @@
             android:layout_height="52dp"
             android:layout_marginTop="30dp"
             android:text="Register"
-            app:layout_constraintEnd_toEndOf="@+id/textInputLayout5"
-            app:layout_constraintStart_toStartOf="@+id/textInputLayout5"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox"
+            app:layout_constraintEnd_toEndOf="@+id/layout_password"
+            app:layout_constraintStart_toStartOf="@+id/layout_password"
+            app:layout_constraintTop_toBottomOf="@+id/register_check_box"
             app:cornerRadius="8dp"
             android:textSize="18sp" />
 
