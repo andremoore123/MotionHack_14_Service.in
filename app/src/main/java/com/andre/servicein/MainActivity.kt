@@ -18,7 +18,6 @@ class MainActivity : AppCompatActivity() {
 
         addList()
         viewPagerSetUp()
-
     }
 
     private fun addList(){
