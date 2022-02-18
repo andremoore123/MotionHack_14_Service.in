@@ -47,4 +47,6 @@ dependencies {
     //Ext Lib For Dot Indicator
     implementation 'com.tbuonomo:dotsindicator:4.2'
 
+    //Ext Lib for Circular Image
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 }

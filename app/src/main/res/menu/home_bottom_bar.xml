@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeScreenFragment2"
+        android:icon="@drawable/ic_baseline_home"
+        android:title="@string/home"/>
+    <item
+        android:id="@+id/activityScreeenFragment"
+        android:icon="@drawable/ic_icon_receipt"
+        android:title="@string/activity"/>
+    <item
+        android:id="@+id/chatScreenFragment"
+        android:icon="@drawable/ic_chat"
+        android:title="@string/chat"/>
+    <item
+        android:id="@+id/profileScreenFragment"
+        android:icon="@drawable/ic_baseline_account_circle"
+        android:title="@string/profile"/>
+</menu>

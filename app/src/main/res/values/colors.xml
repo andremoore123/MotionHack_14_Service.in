@@ -11,4 +11,5 @@
     <color name="primary_blue">#538DFF</color>
     <color name="dark_blue">#1D4492</color>
     <color name="yellow">#E0E27B</color>
+    <color name="colorDividerView">#ECECEC</color>
 </resources>

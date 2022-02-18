@@ -12,4 +12,11 @@
     <string name="third_slide_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Habitasse ornare lectus sagittis eu habitasse sed. Sit ut venenatis dolor nunc.</string>
     <string name="agreement">I agree with terms &amp; condition</string>
     <string name="errorEmpty">Cannot be Empty</string>
+    <string name="otp_verif">Verifikasi Nomor HP</string>
+    <string name="otp_sent">Kami telah mengirim pesan berisi kode OTP ke nomor yang didaftarkan</string>
+    <string name="otp_tidak_terkirim">Tidak menerima pesan?</string>
+    <string name="home">Home</string>
+    <string name="activity">Activity</string>
+    <string name="chat">Chat</string>
+    <string name="profile">Profile</string>
 </resources>

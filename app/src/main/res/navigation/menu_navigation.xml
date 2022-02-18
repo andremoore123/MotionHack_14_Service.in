@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/menu_navigation"
+    app:startDestination="@id/homeScreenFragment2">
+
+    <fragment
+        android:id="@+id/activityScreeenFragment"
+        android:name="com.andre.servicein.ActivityScreeenFragment"
+        android:label="fragment_activity_screeen"
+        tools:layout="@layout/fragment_activity_screeen" >
+        <action
+            android:id="@+id/action_activityScreeenFragment_to_chatScreenFragment"
+            app:destination="@id/chatScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeScreenFragment2"
+        android:name="com.andre.servicein.HomeScreenFragment"
+        android:label="fragment_home_screen"
+        tools:layout="@layout/fragment_home_screen" >
+        <action
+            android:id="@+id/action_homeScreenFragment2_to_activityScreeenFragment"
+            app:destination="@id/activityScreeenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatScreenFragment"
+        android:name="com.andre.servicein.ChatScreenFragment"
+        android:label="fragment_chat_screen"
+        tools:layout="@layout/fragment_chat_screen" >
+        <action
+            android:id="@+id/action_chatScreenFragment_to_profileScreenFragment"
+            app:destination="@id/profileScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileScreenFragment"
+        android:name="com.andre.servicein.ProfileScreenFragment"
+        android:label="fragment_profile_screen"
+        tools:layout="@layout/fragment_profile_screen" >
+        <action
+            android:id="@+id/action_profileScreenFragment_to_homeScreenFragment2"
+            app:destination="@id/homeScreenFragment2" />
+    </fragment>
+</navigation>
