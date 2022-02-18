@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="109dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:cardBackgroundColor="@color/light_grey4"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/layout_profile_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginBottom="9dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/profile_pict4" />
+
+            <TextView
+                android:id="@+id/layout_profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="31dp"
+                android:layout_marginTop="9dp"
+                android:text="Anton Sadikin"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/layout_profile_picture"
+                app:layout_constraintTop_toTopOf="@+id/layout_profile_picture" />
+
+            <TextView
+                android:id="@+id/layout_profle_job"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ahli servis AC"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/layout_profile_name"
+                app:layout_constraintTop_toBottomOf="@+id/layout_profile_name" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                app:layout_constraintStart_toStartOf="@+id/layout_profle_job"
+                app:layout_constraintTop_toBottomOf="@+id/layout_profle_job"
+                app:srcCompat="@drawable/ic_baseline_star_24" />
+
+            <TextView
+                android:id="@+id/layout_profile_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                android:text="4.5"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/imageView4"
+                app:layout_constraintTop_toBottomOf="@+id/layout_profle_job" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/layout_profle_job"
+                app:layout_constraintStart_toEndOf="@+id/layout_profle_job"
+                app:layout_constraintTop_toTopOf="@+id/layout_profle_job"
+                app:srcCompat="@drawable/ic_dot" />
+
+            <TextView
+                android:id="@+id/layout_profile_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Jakarta"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/layout_profle_job"
+                app:layout_constraintStart_toEndOf="@+id/imageView5"
+                app:layout_constraintTop_toTopOf="@+id/layout_profle_job" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
