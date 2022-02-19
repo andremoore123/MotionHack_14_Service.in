@@ -31,7 +31,6 @@
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
-                e
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />

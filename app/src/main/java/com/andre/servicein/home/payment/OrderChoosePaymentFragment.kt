@@ -1,4 +1,4 @@
-package com.andre.servicein
+package com.andre.servicein.home.payment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,18 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.navigation.Navigation
+import com.andre.servicein.R
+import com.google.android.material.appbar.MaterialToolbar
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [OrderChoosePayment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class OrderChoosePayment : Fragment() {
+class OrderChoosePaymentFragment : Fragment() {
 
 
     override fun onCreateView(
@@ -33,9 +25,13 @@ class OrderChoosePayment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val buttonBank = view.findViewById<ConstraintLayout>(R.id.payment_method_bank)
         val buttonGopay = view.findViewById<ConstraintLayout>(R.id.payment_method_gopay)
+        val appbar: MaterialToolbar = view.findViewById(R.id.order_choose_tool_bar)
 
         buttonBank.setOnClickListener {
             Navigation.findNavController(view).navigate(R.id.action_orderChoosePayment_to_orderPaymentBank)
+        }
+        appbar.setNavigationOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_orderChoosePayment_to_orderFormFragment)
         }
     }
 }

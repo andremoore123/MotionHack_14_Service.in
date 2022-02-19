@@ -112,7 +112,6 @@
             android:id="@+id/order_form_input_pesan"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textAlignment="viewStart"
             android:hint="Write something ..."
             android:gravity="top"/>
     </com.google.android.material.textfield.TextInputLayout>

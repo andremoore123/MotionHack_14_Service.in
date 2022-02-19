@@ -40,12 +40,14 @@
         android:layout_marginTop="26dp"
         app:layout_constraintStart_toStartOf="@+id/textView10"
         app:layout_constraintTop_toBottomOf="@+id/textView10"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxBackgroundColor="@color/light_gray">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editText1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:inputType="number"
             android:maxLength="1" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -58,12 +60,14 @@
         app:layout_constraintBottom_toBottomOf="@+id/textInputLayout4"
         app:layout_constraintEnd_toStartOf="@+id/textInputLayout9"
         app:layout_constraintTop_toTopOf="@+id/textInputLayout4"
+        app:boxBackgroundColor="@color/light_gray"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editText3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:inputType="number"
             android:maxLength="1" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -76,12 +80,14 @@
         app:layout_constraintBottom_toBottomOf="@+id/textInputLayout3"
         app:layout_constraintStart_toEndOf="@+id/textInputLayout3"
         app:layout_constraintTop_toTopOf="@+id/textInputLayout3"
+        app:boxBackgroundColor="@color/light_gray"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editText2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:inputType="number"
             android:maxLength="1" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -93,12 +99,14 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/textInputLayout5"
         app:layout_constraintEnd_toEndOf="@+id/textView10"
+        app:boxBackgroundColor="@color/light_gray"
         app:layout_constraintTop_toTopOf="@+id/textInputLayout5">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editText4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:inputType="number"
             android:maxLength="1" />
     </com.google.android.material.textfield.TextInputLayout>

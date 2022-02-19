@@ -9,6 +9,7 @@ import android.text.Editable
 import android.text.Layout
 import android.text.TextWatcher
 import android.util.Log
+import android.util.Patterns
 import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
@@ -20,15 +21,26 @@ import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.android.material.textfield.TextInputLayout
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.ktx.Firebase
 import java.util.*
+import kotlin.collections.HashMap
 
 
 class RegisterActivity : AppCompatActivity() {
+    lateinit var name: String
+    lateinit var email : String
+    lateinit var phone : String
+    lateinit var date : String
+    lateinit var password : String
+    private lateinit var auth: FirebaseAuth
+    val modalBottomSheet = ModalBottomSheet()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
-
+        auth = FirebaseAuth.getInstance()
         //Declare all of the input and button
         val appbar: MaterialToolbar = findViewById(R.id.top_bar_register)
         val selectDate = findViewById<EditText>(R.id.register_input_date)
@@ -43,7 +55,6 @@ class RegisterActivity : AppCompatActivity() {
         val phoneLayout = findViewById<TextInputLayout>(R.id.layout_phone)
         val buttonRegister = findViewById<Button>(R.id.button_register2)
         val checkBox = findViewById<CheckBox>(R.id.register_check_box)
-        val modalBottomSheet = ModalBottomSheet()
 
         // Set App Bar Navigation back to Login Activity
         appbar.setNavigationOnClickListener { onBackPressed() }
@@ -59,48 +70,55 @@ class RegisterActivity : AppCompatActivity() {
 
         // Click Register Button
         buttonRegister.setOnClickListener {
-            var noError = false
-            val name = if (inputName.text.isNotEmpty()) {
-                inputName.text
-                noError = true
-            } else {
+             name = if (inputName.text.isEmpty()){
                 nameLayout.error = getString(R.string.errorEmpty)
-                noError = false
-            }
-            val email = if (inputEmail.text.isNotEmpty()) {
-                inputName.text
-                noError = true
+                inputEmail.requestFocus()
+                return@setOnClickListener
             } else {
+                inputName.text.toString()
+            }
+            email = if (inputEmail.text.isEmpty() || !Patterns.EMAIL_ADDRESS.matcher(inputEmail.text.toString()).matches()) {
                 emailLayout.error = getString(R.string.errorEmpty)
-                noError = false
-            }
-            val phone = if (inputPhone.text.isNotEmpty()) {
-                noError = true
-                inputPhone.text
+                inputEmail.requestFocus()
+                return@setOnClickListener
             } else {
+                inputEmail.text.toString()
+            }
+            phone = if (inputPhone.text.isEmpty()) {
                 phoneLayout.error = getString(R.string.errorEmpty)
-                noError = false
-            }
-            val date = if (selectDate.text.isNotEmpty()) {
-                noError = true
-                selectDate.text
+                inputPhone.requestFocus()
+                return@setOnClickListener
             } else {
+                inputPhone.text.toString()
+            }
+            date = if (selectDate.text.isEmpty()) {
                 dateLayout.error = getString(R.string.errorEmpty)
-                noError = false
-            }
-            val password = if (inputPassword.text.isNotEmpty()) {
-                noError = true
-                inputPassword.text
+                selectDate.requestFocus()
+                return@setOnClickListener
             } else {
+                selectDate.text.toString()
+            }
+            password = if (inputPassword.text.isEmpty()){
                 passwordLayout.error = getString(R.string.errorEmpty)
-                noError = false
+                selectDate.requestFocus()
+                return@setOnClickListener
+            } else {
+                inputPassword.text.toString()
             }
-
-            // To Check no Empty Input
-            if (noError) {
-                modalBottomSheet.show(supportFragmentManager, ModalBottomSheet.TAG)
-            }
+            registerUserWithEmailAndPassword(email, password, phone, date)
         }
+    }
+    private fun registerUserWithEmailAndPassword(email: String, password: String, phone: String,
+    bornDate: String){
+       auth.createUserWithEmailAndPassword(email, password)
+           .addOnCompleteListener{
+               if (it.isSuccessful){
+                   saveFireStore(email, password, phone, bornDate)
+                   modalBottomSheet.show(supportFragmentManager, ModalBottomSheet.TAG)
+               } else {
+                   Toast.makeText(this, it.exception?.message, Toast.LENGTH_SHORT).show()
+               }
+           }
     }
 
     // Class To Handle Date Picker Fragment
@@ -216,5 +234,28 @@ class RegisterActivity : AppCompatActivity() {
             }
 
         }
+    }
+    override fun onStart() {
+        super.onStart()
+        if(auth.currentUser != null){
+            val intent = Intent(this@RegisterActivity, HomeActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+        }
+    }
+    fun saveFireStore(name: String, email: String, phone: String, bornDate: String){
+        val db = FirebaseFirestore.getInstance()
+        val user: MutableMap<String, Any> = HashMap()
+        user["name"] = name
+        user["email"] = email
+        user["phone"] = phone
+        user["bornDate"] = bornDate
+
+        db.collection("users")
+            .add(user)
+            .addOnFailureListener{
+                Toast.makeText(this@RegisterActivity, "Register Failed", Toast.LENGTH_SHORT).show()
+
+            }
     }
 }

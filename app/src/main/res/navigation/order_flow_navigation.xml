@@ -15,24 +15,23 @@
     </fragment>
     <fragment
         android:id="@+id/orderChoosePayment"
-        android:name="com.andre.servicein.OrderChoosePayment"
+        android:name="com.andre.servicein.home.payment.OrderChoosePaymentFragment"
         android:label="fragment_order_choose_payment"
         tools:layout="@layout/fragment_order_choose_payment" >
         <action
             android:id="@+id/action_orderChoosePayment_to_orderPaymentBank"
             app:destination="@id/orderPaymentBank" />
+        <action
+            android:id="@+id/action_orderChoosePayment_to_orderFormFragment"
+            app:destination="@id/orderFormFragment" />
     </fragment>
     <fragment
         android:id="@+id/orderPaymentBank"
-        android:name="com.andre.servicein.OrderPaymentBank"
+        android:name="com.andre.servicein.home.payment.OrderPaymentBank"
         android:label="fragment_order_payment_bank"
         tools:layout="@layout/fragment_order_payment_bank" >
         <action
-            android:id="@+id/action_orderPaymentBank_to_homeScreenFragment"
-            app:destination="@id/homeScreenFragment" />
+            android:id="@+id/action_orderPaymentBank_to_orderChoosePayment"
+            app:destination="@id/orderChoosePayment" />
     </fragment>
-    <fragment
-        android:id="@+id/homeScreenFragment"
-        android:name="com.andre.servicein.home.HomeScreenFragment"
-        android:label="HomeScreenFragment" />
 </navigation>

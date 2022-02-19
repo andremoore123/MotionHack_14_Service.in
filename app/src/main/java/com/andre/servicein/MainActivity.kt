@@ -7,15 +7,18 @@ import android.widget.TextView
 import androidx.viewpager2.widget.ViewPager2
 import com.andre.servicein.boarding.OnBoardingAdapter
 import com.andre.servicein.boarding.OnBoardingItemModel
+import com.google.firebase.auth.FirebaseAuth
 import com.tbuonomo.viewpagerdotsindicator.DotsIndicator
 
 class MainActivity : AppCompatActivity() {
     var adapterBoarding:OnBoardingAdapter? = null
     var list: ArrayList<OnBoardingItemModel>? = ArrayList()
+    private lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         addList()
+        auth = FirebaseAuth.getInstance()
         viewPagerSetUp()
     }
 
@@ -64,6 +67,14 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
                 finish()
             }
+        }
+    }
+    override fun onStart() {
+        super.onStart()
+        if(auth.currentUser != null){
+            val intent = Intent(this@MainActivity, HomeActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
         }
     }
 }
