@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Servicein">
         <activity
+            android:name=".home.payment.PaymentOrder"
+            android:exported="false" />
+        <activity
             android:name=".home.worker.ProfileDataActivity"
             android:exported="false" />
         <activity

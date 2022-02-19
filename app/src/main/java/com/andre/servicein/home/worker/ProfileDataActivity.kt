@@ -1,5 +1,6 @@
 package com.andre.servicein.home.worker
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -8,6 +9,7 @@ import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.Group
 import com.andre.servicein.R
+import com.andre.servicein.home.payment.PaymentOrder
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class ProfileDataActivity : AppCompatActivity() {
@@ -30,5 +32,10 @@ class ProfileDataActivity : AppCompatActivity() {
             containerChoose.visibility = View.VISIBLE
         }
         backButton.setOnClickListener{ onBackPressed() }
+
+        buttonNext.setOnClickListener{
+            intent = Intent(this@ProfileDataActivity, PaymentOrder::class.java)
+            startActivity(intent)
+        }
     }
 }

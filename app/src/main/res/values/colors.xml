@@ -15,4 +15,6 @@
     <color name="colorDividerView">#ECECEC</color>
     <color name="light_grey4">#F5F5F5</color>
     <color name="yellow_star">#FAC218</color>
+    <color name="dark_gray">#666666</color>
+    <color name="error_background">#FDEDED</color>
 </resources>
