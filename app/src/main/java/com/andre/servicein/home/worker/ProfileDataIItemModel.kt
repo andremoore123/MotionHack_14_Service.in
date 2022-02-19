@@ -1,4 +1,4 @@
-package com.andre.servicein.home.profile
+package com.andre.servicein.home.worker
 
 data class ProfileDataIItemModel(
     val image: Int,

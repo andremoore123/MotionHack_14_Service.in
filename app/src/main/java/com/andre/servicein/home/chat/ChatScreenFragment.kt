@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.andre.servicein.R
-import com.andre.servicein.home.profile.ProfileDataItemAdapter
 
 class ChatScreenFragment : Fragment() {
     var listChat: ArrayList<ChatDataItemModel> = ArrayList()

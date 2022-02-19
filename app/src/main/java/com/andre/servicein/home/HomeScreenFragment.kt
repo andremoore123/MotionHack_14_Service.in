@@ -9,8 +9,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.andre.servicein.R
-import com.andre.servicein.home.profile.ProfileDataIItemModel
-import com.andre.servicein.home.profile.ProfileDataItemAdapter
+import com.andre.servicein.home.worker.ProfileDataIItemModel
+import com.andre.servicein.home.worker.ProfileDataItemAdapter
 import com.tbuonomo.viewpagerdotsindicator.DotsIndicator
 
 class HomeScreenFragment : Fragment() {

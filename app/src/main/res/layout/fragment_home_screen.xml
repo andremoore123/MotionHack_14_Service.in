@@ -16,7 +16,7 @@
             android:id="@+id/home_profile_picture"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="25dp"
             android:src="@drawable/profile_picture"
             app:layout_constraintStart_toStartOf="@+id/textInputLayout6"
             app:layout_constraintTop_toTopOf="parent" />
@@ -72,11 +72,11 @@
             android:layout_width="0dp"
             android:layout_height="151dp"
             android:layout_marginTop="15dp"
-            app:layout_constraintEnd_toEndOf="@+id/textInputLayout6"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@+id/textInputLayout6"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout6"
-            android:scaleType="fitXY">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout6">
 
         </androidx.viewpager2.widget.ViewPager2>
 
@@ -84,7 +84,7 @@
             android:id="@+id/home_banner_indicator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="55dp"
+            android:layout_marginStart="42dp"
             android:layout_marginTop="130dp"
             app:dotsColor="@color/black"
             app:dotsCornerRadius="8dp"
