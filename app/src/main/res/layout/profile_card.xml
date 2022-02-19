@@ -59,12 +59,14 @@
 
             <ImageView
                 android:id="@+id/imageView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="7dp"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/layout_profile_rating"
                 app:layout_constraintStart_toStartOf="@+id/layout_profle_job"
                 app:layout_constraintTop_toBottomOf="@+id/layout_profle_job"
-                app:srcCompat="@drawable/ic_baseline_star_24" />
+                app:srcCompat="@drawable/ic_baseline_star_24"
+                app:tint="@color/yellow_star" />
 
             <TextView
                 android:id="@+id/layout_profile_rating"
@@ -74,7 +76,7 @@
                 android:layout_marginTop="8dp"
                 android:text="4.5"
                 android:textAlignment="center"
-                android:textSize="16sp"
+                android:textSize="12sp"
                 app:layout_constraintStart_toEndOf="@+id/imageView4"
                 app:layout_constraintTop_toBottomOf="@+id/layout_profle_job" />
 
@@ -89,15 +91,26 @@
                 app:srcCompat="@drawable/ic_dot" />
 
             <TextView
-                android:id="@+id/layout_profile_city"
+                android:id="@+id/layout_profile_distance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:text="Jakarta"
+                android:text="3.5"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="@+id/layout_profle_job"
                 app:layout_constraintStart_toEndOf="@+id/imageView5"
                 app:layout_constraintTop_toTopOf="@+id/layout_profle_job" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="1dp"
+                android:text="Km"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/layout_profile_distance"
+                app:layout_constraintStart_toEndOf="@+id/layout_profile_distance"
+                app:layout_constraintTop_toTopOf="@+id/layout_profile_distance" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>

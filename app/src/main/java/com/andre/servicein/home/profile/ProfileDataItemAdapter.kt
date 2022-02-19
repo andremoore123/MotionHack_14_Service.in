@@ -15,14 +15,14 @@ class ProfileDataItemAdapter(var list:ArrayList<ProfileDataIItemModel>):
         var image = view.findViewById<ImageView>(R.id.layout_profile_picture)
         var name = view.findViewById<TextView>(R.id.layout_profile_name)
         var job = view.findViewById<TextView>(R.id.layout_profle_job)
-        var city = view.findViewById<TextView>(R.id.layout_profile_city)
+        var city = view.findViewById<TextView>(R.id.layout_profile_distance)
         var rating = view.findViewById<TextView>(R.id.layout_profile_rating)
 
         fun bind(model: ProfileDataIItemModel){
             image?.setImageResource(model.image)
             name.text = model.name
             job.text = model.job
-            city.text = model.city
+            city.text = model.distance
             rating.text = model.rating
         }
     }
@@ -32,7 +32,6 @@ class ProfileDataItemAdapter(var list:ArrayList<ProfileDataIItemModel>):
             LayoutInflater.from(parent.context).inflate(R.layout.profile_card, parent, false)
         )
     }
-
     override fun onBindViewHolder(holder: ProfileDataItemViewHolder, position: Int) {
         holder.bind(list[position])
     }

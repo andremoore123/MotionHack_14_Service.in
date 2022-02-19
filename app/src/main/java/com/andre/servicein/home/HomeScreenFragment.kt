@@ -1,4 +1,4 @@
-package com.andre.servicein
+package com.andre.servicein.home
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,8 +8,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
-import com.andre.servicein.home.BannerItemAdapter
-import com.andre.servicein.home.BannerItemModel
+import com.andre.servicein.R
 import com.andre.servicein.home.profile.ProfileDataIItemModel
 import com.andre.servicein.home.profile.ProfileDataItemAdapter
 import com.tbuonomo.viewpagerdotsindicator.DotsIndicator
@@ -47,41 +46,69 @@ class HomeScreenFragment : Fragment() {
         listBanner?.add(BannerItemModel(R.drawable.banner_2))
     }
     private fun addlistTopRecommendation(){
-        listTopRecommendation?.add(ProfileDataIItemModel(
+        listTopRecommendation?.add(
+            ProfileDataIItemModel(
             R.drawable.profile_pict1,
             "Anton Sadikin",
             "Ahli Servis AC",
-            "Jakarta",
+            "3",
             "4,5"
-        ))
-        listTopRecommendation?.add(ProfileDataIItemModel(
+        )
+        )
+        listTopRecommendation?.add(
+            ProfileDataIItemModel(
             R.drawable.profile_pict1,
             "Anton Sadikin",
             "Ahli Servis AC",
-            "Jakarta",
+            "3",
             "4,5"
-        ))
-        listTopRecommendation?.add(ProfileDataIItemModel(
+        )
+        )
+        listTopRecommendation?.add(
+            ProfileDataIItemModel(
             R.drawable.profile_pict1,
             "Anton Sadikin",
             "Ahli Servis AC",
-            "Jakarta",
+            "3",
             "4,5"
-        ))
-        listTopRecommendation?.add(ProfileDataIItemModel(
+        )
+        )
+        listTopRecommendation?.add(
+            ProfileDataIItemModel(
             R.drawable.profile_pict1,
             "Anton Sadikin",
             "Ahli Servis AC",
-            "Jakarta",
+            "3",
             "4,5"
-        ))
-        listTopRecommendation?.add(ProfileDataIItemModel(
+        )
+        )
+        listTopRecommendation?.add(
+            ProfileDataIItemModel(
             R.drawable.profile_pict1,
             "Anton Sadikin",
             "Ahli Servis AC",
-            "Jakarta",
+            "3",
             "4,5"
-        ))
+        )
+        )
+        listTopRecommendation?.add(
+            ProfileDataIItemModel(
+            R.drawable.profile_pict1,
+            "Anton Sadikin",
+            "Ahli Servis AC",
+            "3",
+            "4,5"
+        )
+        )
+        listTopRecommendation?.add(
+            ProfileDataIItemModel(
+            R.drawable.profile_pict1,
+            "Anton Sadikin",
+            "Ahli Servis AC",
+            "3",
+            "4,5"
+        )
+        )
     }
     private fun setUpBannerPager(){
         bannerItemAdapter = BannerItemAdapter(listBanner!!)

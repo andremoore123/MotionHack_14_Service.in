@@ -4,6 +4,6 @@ data class ProfileDataIItemModel(
     val image: Int,
     val name: String,
     val job: String,
-    val city: String,
+    val distance: String,
     val rating: String
 )
