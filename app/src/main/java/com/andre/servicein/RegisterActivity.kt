@@ -78,7 +78,7 @@ class RegisterActivity : AppCompatActivity() {
                 inputName.text.toString()
             }
             email = if (inputEmail.text.isEmpty() || !Patterns.EMAIL_ADDRESS.matcher(inputEmail.text.toString()).matches()) {
-                emailLayout.error = getString(R.string.errorEmpty)
+                emailLayout.error = "Email tidak valid"
                 inputEmail.requestFocus()
                 return@setOnClickListener
             } else {
@@ -253,9 +253,5 @@ class RegisterActivity : AppCompatActivity() {
 
         db.collection("users")
             .add(user)
-            .addOnFailureListener{
-                Toast.makeText(this@RegisterActivity, "Register Failed", Toast.LENGTH_SHORT).show()
-
-            }
     }
 }

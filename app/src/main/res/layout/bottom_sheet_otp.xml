@@ -137,7 +137,7 @@
         android:id="@+id/otp_button_batalkan"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:layout_width="0dp"
-        android:layout_height="48dp"
+        android:layout_height="70dp"
         android:layout_marginTop="4dp"
         android:text="Batalkan"
         android:textSize="16sp"
@@ -149,7 +149,7 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/otp_button_iya"
         android:layout_width="0dp"
-        android:layout_height="48dp"
+        android:layout_height="70dp"
         android:layout_marginTop="24dp"
         android:text="Iya"
         app:layout_constraintEnd_toEndOf="@+id/textInputLayout9"

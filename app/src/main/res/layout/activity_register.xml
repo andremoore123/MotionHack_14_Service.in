@@ -206,7 +206,7 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_register2"
             android:layout_width="0dp"
-            android:layout_height="52dp"
+            android:layout_height="70dp"
             android:layout_marginTop="30dp"
             android:text="Register"
             app:layout_constraintEnd_toEndOf="@+id/layout_password"
