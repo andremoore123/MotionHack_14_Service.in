@@ -6,12 +6,13 @@
         <entry key="..\:/File Codingan/Kotlin-Project/Servicein/app/src/main/res/drawable/background_bottomsheet_otp.xml" value="0.4466666666666667" />
         <entry key="..\:/File Codingan/Kotlin-Project/Servicein/app/src/main/res/drawable/ic_baseline_account_circle.xml" value="0.18055555555555555" />
         <entry key="..\:/File Codingan/Kotlin-Project/Servicein/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.18055555555555555" />
-        <entry key="..\:/File Codingan/Kotlin-Project/Servicein/app/src/main/res/layout/activity_home.xml" value="0.5" />
+        <entry key="..\:/File Codingan/Kotlin-Project/Servicein/app/src/main/res/drawable/selector.xml" value="0.17037037037037037" />
+        <entry key="..\:/File Codingan/Kotlin-Project/Servicein/app/src/main/res/layout/activity_home.xml" value="0.22" />
         <entry key="..\:/File Codingan/Kotlin-Project/Servicein/app/src/main/res/layout/activity_item_layout.xml" value="0.22" />
         <entry key="..\:/File Codingan/Kotlin-Project/Servicein/app/src/main/res/layout/activity_list_of_category.xml" value="0.15601851851851853" />
         <entry key="..\:/File Codingan/Kotlin-Project/Servicein/app/src/main/res/layout/activity_login.xml" value="0.14666666666666667" />
         <entry key="..\:/File Codingan/Kotlin-Project/Servicein/app/src/main/res/layout/activity_main.xml" value="0.3333333333333333" />
-        <entry key="..\:/File Codingan/Kotlin-Project/Servicein/app/src/main/res/layout/activity_payment_order.xml" value="0.3449074074074074" />
+        <entry key="..\:/File Codingan/Kotlin-Project/Servicein/app/src/main/res/layout/activity_payment_order.xml" value="0.14666666666666667" />
         <entry key="..\:/File Codingan/Kotlin-Project/Servicein/app/src/main/res/layout/activity_profile_data.xml" value="0.22" />
         <entry key="..\:/File Codingan/Kotlin-Project/Servicein/app/src/main/res/layout/activity_register.xml" value="0.21008403361344538" />
         <entry key="..\:/File Codingan/Kotlin-Project/Servicein/app/src/main/res/layout/banner_layout.xml" value="0.4466666666666667" />
@@ -39,6 +40,7 @@
         <entry key="..\:/File Codingan/Kotlin-Project/Servicein/app/src/main/res/menu/home_bottom_bar.xml" value="0.3333333333333333" />
         <entry key="..\:/File Codingan/Kotlin-Project/Servicein/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.10277777777777777" />
         <entry key="..\:/File Codingan/Kotlin-Project/Servicein/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.10136986301369863" />
+        <entry key="..\:/File Codingan/Kotlin-Project/Servicein/app/src/main/res/xml/selector.xml" value="0.15601851851851853" />
       </map>
     </option>
   </component>

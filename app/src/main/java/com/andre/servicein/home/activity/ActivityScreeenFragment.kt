@@ -50,6 +50,7 @@ class ActivityScreeenFragment : Fragment() {
             "Sat"
         ))
         listActivity.add(ActivityDataItemModel(
+
             "Tony Sumanto",
             "Ahli Servis Laptop",
             "Fri"

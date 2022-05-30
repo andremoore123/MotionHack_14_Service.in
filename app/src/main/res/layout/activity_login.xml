@@ -44,11 +44,11 @@
             app:boxCornerRadiusBottomEnd="8dp"
             app:boxCornerRadiusTopEnd="8dp"
             app:boxCornerRadiusBottomStart="8dp"
-            app:boxCornerRadiusTopStart="8dp"
-            android:background="@color/light_gray">
+            app:boxCornerRadiusTopStart="8dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/register_input_email"
+                android:background="@color/light_gray"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:maxLines="1"
@@ -77,12 +77,12 @@
             app:boxCornerRadiusBottomEnd="8dp"
             app:boxCornerRadiusTopEnd="8dp"
             app:boxCornerRadiusBottomStart="8dp"
-            app:boxCornerRadiusTopStart="8dp"
-            android:background="@color/light_gray">
+            app:boxCornerRadiusTopStart="8dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/register_input_password"
                 android:layout_width="match_parent"
+                android:background="@color/light_gray"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
                 android:maxLines="1"
